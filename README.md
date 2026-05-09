@@ -9,20 +9,23 @@ inspection of relevant communications.
 
 ## Analysis and Findings
 ## Sub-Task 1: Extraction of Network Images
-Objective:
+**Objective:**
 Identify and extract image files observed in network traffic.
-Findings:
+**Findings:**
 Two images—anz-logo.jpg and bank-card.jpg—were identified within the captured traffic.
-Methodology:
+**Methodology:**
 * Followed the relevant TCP streams in Wireshark
 * Identified JPEG file signatures using hexadecimal headers and footers (FFD8 / FFE9)
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Images%20Screenshot/Screenshot%202026-05-07%20220533.png)
 * Extracted the hex data and reconstructed the images using a hex editor (HxD)
+![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Images%20Screenshot/Screenshot%202026-05-07%20222947.png)
 * Saved the reconstructed files in .jpg format
-Result:
+**Result:**
 Both images were successfully extracted and reconstructed.
 Anz-logo :
+![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Captures/Anz-Logo.jpg)
 Bank-Card :
+![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Captures/Bank%20Card.jpg)
 ## Sub-Task 2: Hidden Content in Images (ANZ1.jpg & ANZ2.jpg)
 Objective:
 Analyze images for hidden or embedded data.
