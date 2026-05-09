@@ -11,8 +11,10 @@ inspection of relevant communications.
 ## Sub-Task 1: Extraction of Network Images
 **Objective:**
 Identify and extract image files observed in network traffic.
+
 **Findings:**
 Two images—anz-logo.jpg and bank-card.jpg—were identified within the captured traffic.
+
 **Methodology:**
 * Followed the relevant TCP streams in Wireshark
 * Identified JPEG file signatures using hexadecimal headers and footers (FFD8 / FFE9)
@@ -20,6 +22,7 @@ Two images—anz-logo.jpg and bank-card.jpg—were identified within the capture
 * Extracted the hex data and reconstructed the images using a hex editor (HxD)
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Images%20Screenshot/Screenshot%202026-05-07%20222947.png)
 * Saved the reconstructed files in .jpg format
+
 **Result:**
 Both images were successfully extracted and reconstructed.
 
@@ -31,8 +34,10 @@ Both images were successfully extracted and reconstructed.
 
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Captures/Bank%20Card.jpg)
 ## Sub-Task 2: Hidden Content in Images (ANZ1.jpg & ANZ2.jpg)
+
 **Objective:**
 Analyze images for hidden or embedded data.
+
 **Findings:**
 Two images (ANZ1.jpg and ANZ2.jpg) were extracted using the same reconstruction process as
 above.
@@ -54,26 +59,32 @@ metadata.
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Captures/anz2.jpg)
 
 ## Sub-Task 3: Suspicious Document Analysis
+
 **Objective:**
 Retrieve and analyze the contents of a suspicious file:
 how-to-commit-crimes.docx
+
 **Methodology:**
 * Followed the corresponding TCP stream
 * Examined the ASCII representation of the file contents
+
 **Findings:**
 The document content was successfully recovered directly from the packet stream and reviewed.
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Images%20Screenshot/Screenshot%202026-05-09%20091316.png)
 
 ## Sub-Task 4: PDF Document Extraction
+
 **Objective:**
 Extract and review accessed PDF files:
 * ANZ_Document.pdf
 * ANZ_Document2.pdf
 * evil.pdf
+
 **Methodology:**
 * Identified file boundaries using appropriate file signatures 20/0A
 * Extracted hex data from TCP streams
 * Reconstructed files using a hex editor
+
 **Result:**
 All three PDF documents were successfully extracted and analyzed.
 
@@ -90,8 +101,10 @@ All three PDF documents were successfully extracted and analyzed.
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Images%20Screenshot/Evil.png)
 
 ## Sub-Task 5: Hidden Message File
+
 **Objective:**
 Analyze the file hiddenmessage2.txt
+
 **Findings:**
 * The file was initially misleading, as it appeared to be a text file
 * Upon inspection, it was identified as a JFIF (JPEG) file
@@ -101,6 +114,7 @@ Analyze the file hiddenmessage2.txt
 **Methodology:**
 * Extracted and reconstructed using JPEG headers
 * Converted into .jpg format
+
 **Result:**
 The file revealed an image (hiddenmessage2.jpg) containing the intended hidden content.
 
@@ -109,35 +123,45 @@ The file revealed an image (hiddenmessage2.jpg) containing the intended hidden c
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Captures/hiddenmessages2.jpg)
 
 ## Sub-Task 6: ATM Image Traffic Analysis
+
 **Objective:**
 Analyze the file atm-image.jpg and identify anomalies.
+
 **Findings:**
 * The traffic associated with this image showed irregularities
 * Further inspection shows that the traffic contains more than one embedded image
+
 **Result:**
 The image was successfully extracted, confirming unusual characteristics in its transmission.
+
 **Atm-images.jpg :**
 
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Captures/atm%20images.jpg)
 
 ## Sub-Task 7: Broken PNG Image Recovery
+
 **Objective:**
 Recover and analyze broken.png
+
 **Findings:**
 * The file contained a Base64-encoded PNG image
 * Identified by the signature iVBOR, commonly associated with Base64-encoded PNG files
+
 **Methodology:**
 * Decoded the Base64 content using an external decoding tool, base64.guru was used for the conversion
 * Converted the output into a valid .png image
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Images%20Screenshot/Screenshot%202026-05-08%20084650.png)
+
 **Result:**
 The image was successfully reconstructed and viewed.
 
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Captures/image.png)
 
 ## Sub-Task 8: Secure PDF Extraction
+
 **Objective:**
 Access and extract contents of securepdf.pdf
+
 **Findings & Methodology:**
 * Identified embedded content within the file
 * Discovered a hidden archive structure (ZIP format) using signature analysis (504B / 0506)
@@ -145,6 +169,7 @@ Access and extract contents of securepdf.pdf
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Images%20Screenshot/Screenshot%202026-05-09%20095430.png)
 * Identified the password “secure” within the traffic analysis
 * Successfully decrypted Using the password which is “secure” that was gotten during the analysis stage and accessed the document rawpdf.pdf
+
 **Result:**
 The protected PDF file was extracted and its contents reviewed.
 
