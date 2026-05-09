@@ -16,6 +16,7 @@ Two images—anz-logo.jpg and bank-card.jpg—were identified within the capture
 Methodology:
 * Followed the relevant TCP streams in Wireshark
 * Identified JPEG file signatures using hexadecimal headers and footers (FFD8 / FFE9)
+![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Images%20Screenshot/Screenshot%202026-05-07%20220533.png)
 * Extracted the hex data and reconstructed the images using a hex editor (HxD)
 * Saved the reconstructed files in .jpg format
 Result:
