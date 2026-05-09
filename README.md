@@ -8,21 +8,21 @@ inspection of relevant communications.
 ![Wireshark Screenshot](https://github.com/CYBER-PIKIN/Wireshark-Packet-Analysis/blob/main/Images%20Screenshot/Screenshot%202026-05-07%20215921.png?raw=1)
 
 ## Analysis and Findings
-Sub-Task 1: Extraction of Network Images
+## Sub-Task 1: Extraction of Network Images
 Objective:
 Identify and extract image files observed in network traffic.
 Findings:
 Two images—anz-logo.jpg and bank-card.jpg—were identified within the captured traffic.
 Methodology:
- Followed the relevant TCP streams in Wireshark
- Identified JPEG file signatures using hexadecimal headers and footers (FFD8 / FFE9)
- Extracted the hex data and reconstructed the images using a hex editor (HxD)
- Saved the reconstructed files in .jpg format
+* Followed the relevant TCP streams in Wireshark
+* Identified JPEG file signatures using hexadecimal headers and footers (FFD8 / FFE9)
+* Extracted the hex data and reconstructed the images using a hex editor (HxD)
+* Saved the reconstructed files in .jpg format
 Result:
 Both images were successfully extracted and reconstructed.
 Anz-logo :
 Bank-Card :
-Sub-Task 2: Hidden Content in Images (ANZ1.jpg & ANZ2.jpg)
+## Sub-Task 2: Hidden Content in Images (ANZ1.jpg & ANZ2.jpg)
 Objective:
 Analyze images for hidden or embedded data.
 Findings:
@@ -34,16 +34,16 @@ Conclusion:
 The image contained concealed data, indicating potential use of steganography or embedded
 metadata.
 ANZ1 : ANZ2 :
-Sub-Task 3: Suspicious Document Analysis
+## Sub-Task 3: Suspicious Document Analysis
 Objective:
 Retrieve and analyze the contents of a suspicious file:
 how-to-commit-crimes.docx
 Methodology:
- Followed the corresponding TCP stream
- Examined the ASCII representation of the file contents
+* Followed the corresponding TCP stream
+* Examined the ASCII representation of the file contents
 Findings:
 The document content was successfully recovered directly from the packet stream and reviewed.
-Sub-Task 4: PDF Document Extraction
+## Sub-Task 4: PDF Document Extraction
 Objective:
 Extract and review accessed PDF files:
  ANZ_Document.pdf
@@ -57,7 +57,7 @@ Result:
 All three PDF documents were successfully extracted and analyzed. Solution
 ANZ_Document : ANZ_Document2 :
 Evil.pdf :
-Sub-Task 5: Hidden Message File
+## Sub-Task 5: Hidden Message File
 Objective:
 Analyze the file hiddenmessage2.txt
 Findings:
@@ -69,7 +69,7 @@ Methodology:
 Result:
 The file revealed an image (hiddenmessage2.jpg) containing the intended hidden content.
 Hiddenmessage2.jpg :
-Sub-Task 6: ATM Image Traffic Analysis
+## Sub-Task 6: ATM Image Traffic Analysis
 Objective:
 Analyze the file atm-image.jpg and identify anomalies.
 Findings:
@@ -78,7 +78,7 @@ Findings:
 Result:
 The image was successfully extracted, confirming unusual characteristics in its transmission.
 atm-images.jpg :
-Sub-Task 7: Broken PNG Image Recovery
+## Sub-Task 7: Broken PNG Image Recovery
 Objective:
 Recover and analyze broken.png
 Findings:
@@ -90,7 +90,7 @@ conversion
  Converted the output into a valid .png image
 Result:
 The image was successfully reconstructed and viewed.
-Sub-Task 8: Secure PDF Extraction
+## Sub-Task 8: Secure PDF Extraction
 Objective:
 Access and extract contents of securepdf.pdf
 Findings & Methodology:
